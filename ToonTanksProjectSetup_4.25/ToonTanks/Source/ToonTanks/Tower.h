@@ -1,5 +1,3 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
 #pragma once
 
 #include "CoreMinimal.h"
@@ -7,31 +5,31 @@
 #include "Tower.generated.h"
 
 /**
- * 
+ *
  */
 UCLASS()
 class TOONTANKS_API ATower : public ABasePawn
 {
-	GENERATED_BODY()
+    GENERATED_BODY()
 
 public:
-	virtual void Tick(float DeltaTime) override;
+    virtual void Tick(float DeltaTime) override;
 
-	void HandleDestruction();
+    void HandleDestruction();
 
 protected:
-	// Called when the game starts or when spawned
-	virtual void BeginPlay() override;
+    // Called when the game starts or when spawned
+    virtual void BeginPlay() override;
 
 private:
-	class ATank* Tank;
+    class ATank* GetClosestTank();
 
-	UPROPERTY(EditAnywhere,Category="Combat")
-	float AttackRange = 1000.f;
+    UPROPERTY(EditAnywhere, Category = "Combat")
+    float AttackRange = 1000.f;
 
-	FTimerHandle FireRateTimerHandle;
-	float FireRate = 2.f;
-	void CheckFireCondition();
+    FTimerHandle FireRateTimerHandle;
+    float FireRate = 2.f;
+    void CheckFireCondition();
 
-	bool InFireRange();
+    bool InFireRange(ATank* TargetTank);
 };

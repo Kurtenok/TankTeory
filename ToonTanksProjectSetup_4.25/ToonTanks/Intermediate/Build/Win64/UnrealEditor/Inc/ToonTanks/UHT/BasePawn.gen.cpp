@@ -6,10 +6,13 @@
 
 #include "UObject/GeneratedCppIncludes.h"
 #include "ToonTanks/BasePawn.h"
+#include "UObject/CoreNet.h"
 PRAGMA_DISABLE_DEPRECATION_WARNINGS
 void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 // Cross Module References
 	COREUOBJECT_API UClass* Z_Construct_UClass_UClass();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FRotator();
+	COREUOBJECT_API UScriptStruct* Z_Construct_UScriptStruct_FVector();
 	ENGINE_API UClass* Z_Construct_UClass_APawn();
 	ENGINE_API UClass* Z_Construct_UClass_UCameraShakeBase_NoRegister();
 	ENGINE_API UClass* Z_Construct_UClass_UCapsuleComponent_NoRegister();
@@ -22,8 +25,192 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 	TOONTANKS_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_ToonTanks();
 // End Cross Module References
+	DEFINE_FUNCTION(ABasePawn::execMulticastRotateTurret)
+	{
+		P_GET_STRUCT(FRotator,Z_Param_TurretRotation);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->MulticastRotateTurret_Implementation(Z_Param_TurretRotation);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABasePawn::execServerRotateTurret)
+	{
+		P_GET_STRUCT(FVector,Z_Param_LookAtTarget);
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerRotateTurret_Validate(Z_Param_LookAtTarget))
+		{
+			RPC_ValidateFailed(TEXT("ServerRotateTurret_Validate"));
+			return;
+		}
+		P_THIS->ServerRotateTurret_Implementation(Z_Param_LookAtTarget);
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABasePawn::execMulticastFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->MulticastFire_Implementation();
+		P_NATIVE_END;
+	}
+	DEFINE_FUNCTION(ABasePawn::execServerFire)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		if (!P_THIS->ServerFire_Validate())
+		{
+			RPC_ValidateFailed(TEXT("ServerFire_Validate"));
+			return;
+		}
+		P_THIS->ServerFire_Implementation();
+		P_NATIVE_END;
+	}
+	struct BasePawn_eventMulticastRotateTurret_Parms
+	{
+		FRotator TurretRotation;
+	};
+	struct BasePawn_eventServerRotateTurret_Parms
+	{
+		FVector LookAtTarget;
+	};
+	static FName NAME_ABasePawn_MulticastFire = FName(TEXT("MulticastFire"));
+	void ABasePawn::MulticastFire()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_MulticastFire),NULL);
+	}
+	static FName NAME_ABasePawn_MulticastRotateTurret = FName(TEXT("MulticastRotateTurret"));
+	void ABasePawn::MulticastRotateTurret(FRotator TurretRotation)
+	{
+		BasePawn_eventMulticastRotateTurret_Parms Parms;
+		Parms.TurretRotation=TurretRotation;
+		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_MulticastRotateTurret),&Parms);
+	}
+	static FName NAME_ABasePawn_ServerFire = FName(TEXT("ServerFire"));
+	void ABasePawn::ServerFire()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_ServerFire),NULL);
+	}
+	static FName NAME_ABasePawn_ServerRotateTurret = FName(TEXT("ServerRotateTurret"));
+	void ABasePawn::ServerRotateTurret(FVector LookAtTarget)
+	{
+		BasePawn_eventServerRotateTurret_Parms Parms;
+		Parms.LookAtTarget=LookAtTarget;
+		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_ServerRotateTurret),&Parms);
+	}
 	void ABasePawn::StaticRegisterNativesABasePawn()
 	{
+		UClass* Class = ABasePawn::StaticClass();
+		static const FNameNativePtrPair Funcs[] = {
+			{ "MulticastFire", &ABasePawn::execMulticastFire },
+			{ "MulticastRotateTurret", &ABasePawn::execMulticastRotateTurret },
+			{ "ServerFire", &ABasePawn::execServerFire },
+			{ "ServerRotateTurret", &ABasePawn::execServerRotateTurret },
+		};
+		FNativeFunctionRegistrar::RegisterFunctions(Class, Funcs, UE_ARRAY_COUNT(Funcs));
+	}
+	struct Z_Construct_UFunction_ABasePawn_MulticastFire_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasePawn, nullptr, "MulticastFire", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00044CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABasePawn_MulticastFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_TurretRotation;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::NewProp_TurretRotation = { "TurretRotation", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BasePawn_eventMulticastRotateTurret_Parms, TurretRotation), Z_Construct_UScriptStruct_FRotator, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::NewProp_TurretRotation,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasePawn, nullptr, "MulticastRotateTurret", nullptr, nullptr, Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::PropPointers), sizeof(BasePawn_eventMulticastRotateTurret_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00844CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::PropPointers) < 2048);
+	static_assert(sizeof(BasePawn_eventMulticastRotateTurret_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ABasePawn_MulticastRotateTurret()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_MulticastRotateTurret_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABasePawn_ServerFire_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasePawn_ServerFire_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasePawn_ServerFire_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasePawn, nullptr, "ServerFire", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80240CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_ServerFire_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasePawn_ServerFire_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABasePawn_ServerFire()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_ServerFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics
+	{
+		static const UECodeGen_Private::FStructPropertyParams NewProp_LookAtTarget;
+		static const UECodeGen_Private::FPropertyParamsBase* const PropPointers[];
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+	const UECodeGen_Private::FStructPropertyParams Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::NewProp_LookAtTarget = { "LookAtTarget", nullptr, (EPropertyFlags)0x0010000000000080, UECodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, nullptr, nullptr, 1, STRUCT_OFFSET(BasePawn_eventServerRotateTurret_Parms, LookAtTarget), Z_Construct_UScriptStruct_FVector, METADATA_PARAMS(0, nullptr) };
+	const UECodeGen_Private::FPropertyParamsBase* const Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::PropPointers[] = {
+		(const UECodeGen_Private::FPropertyParamsBase*)&Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::NewProp_LookAtTarget,
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasePawn, nullptr, "ServerRotateTurret", nullptr, nullptr, Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::PropPointers, UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::PropPointers), sizeof(BasePawn_eventServerRotateTurret_Parms), RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x80A40CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::Function_MetaDataParams) };
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::PropPointers) < 2048);
+	static_assert(sizeof(BasePawn_eventServerRotateTurret_Parms) < MAX_uint16);
+	UFunction* Z_Construct_UFunction_ABasePawn_ServerRotateTurret()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_ServerRotateTurret_Statics::FuncParams);
+		}
+		return ReturnFunction;
 	}
 	IMPLEMENT_CLASS_NO_AUTO_REGISTRATION(ABasePawn);
 	UClass* Z_Construct_UClass_ABasePawn_NoRegister()
@@ -33,6 +220,7 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 	struct Z_Construct_UClass_ABasePawn_Statics
 	{
 		static UObject* (*const DependentSingletons[])();
+		static const FClassFunctionLinkInfo FuncInfo[];
 #if WITH_METADATA
 		static const UECodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
@@ -81,6 +269,13 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		(UObject* (*)())Z_Construct_UPackage__Script_ToonTanks,
 	};
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::DependentSingletons) < 16);
+	const FClassFunctionLinkInfo Z_Construct_UClass_ABasePawn_Statics::FuncInfo[] = {
+		{ &Z_Construct_UFunction_ABasePawn_MulticastFire, "MulticastFire" }, // 2451281080
+		{ &Z_Construct_UFunction_ABasePawn_MulticastRotateTurret, "MulticastRotateTurret" }, // 1322410705
+		{ &Z_Construct_UFunction_ABasePawn_ServerFire, "ServerFire" }, // 1406613259
+		{ &Z_Construct_UFunction_ABasePawn_ServerRotateTurret, "ServerRotateTurret" }, // 103201578
+	};
+	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::FuncInfo) < 2048);
 #if WITH_METADATA
 	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UClass_ABasePawn_Statics::Class_MetaDataParams[] = {
 		{ "HideCategories", "Navigation" },
@@ -178,11 +373,11 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		"Game",
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
-		nullptr,
+		FuncInfo,
 		Z_Construct_UClass_ABasePawn_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
-		0,
+		UE_ARRAY_COUNT(FuncInfo),
 		UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::PropPointers),
 		0,
 		0x009000A4u,
@@ -208,9 +403,9 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 1602981990U) },
+		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 1549517064U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_405660633(TEXT("/Script/ToonTanks"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_73081350(TEXT("/Script/ToonTanks"),
 		Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

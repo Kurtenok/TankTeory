@@ -1,12 +1,12 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\singlefile\\basepawn.h",
+        "Source": "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\singlefile\\basepawn.h",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\definitions.toontanks.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\shareddefinitions.engine.cpp20.inclorderunreal5_0.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\definitions.toontanks.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\shareddefinitions.engine.cpp20.inclorderunreal5_0.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\core\\public\\coreminimal.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\core\\public\\coretypes.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\core\\public\\hal\\platform.h",
@@ -692,7 +692,7 @@
             "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navigationtypes.generated.h",
             "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\navagentinterface.generated.h",
             "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\pawn.generated.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\basepawn.generated.h"
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\basepawn.generated.h"
         ],
         "ImportedModules": [],
         "ImportedHeaderUnits": []

@@ -17,6 +17,8 @@
 				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/Assets/Effects/P_ProjectileTrail.uasset",
 				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/CameraShake/BP_HitCameraShake.uasset",
 				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/CameraShake/BP_DeathCameraShake.uasset",
+				"D:/Kursach/TankTeory/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Pawns/BP_PawnTank.uasset",
+				"D:/Kursach/TankTeory/ToonTanksProjectSetup_4.25/ToonTanks/Content/Maps/Main.umap",
 				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Actors/MyProjectile.uasset"
 			]
 		}

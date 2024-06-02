@@ -1,8 +1,8 @@
-"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h"
-/FI"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\Definitions.ToonTanks.h"
-/Fo"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h.obj"
-/sourceDependencies "D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h.dep.json"
-@"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\ToonTanks.Shared.rsp"
+"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h"
+/FI"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\Definitions.ToonTanks.h"
+/Fo"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h.obj"
+/sourceDependencies "D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\SingleFile\BasePawn.h.dep.json"
+@"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\UnrealEditor\Development\ToonTanks\ToonTanks.Shared.rsp"
 /Zc:inline
 /nologo
 /Oi

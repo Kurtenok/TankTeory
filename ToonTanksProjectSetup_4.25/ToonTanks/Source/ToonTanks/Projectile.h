@@ -48,4 +48,7 @@ private:
 
 	UPROPERTY(EditAnywhere,Category="Combat")
 	TSubclassOf<UCameraShakeBase>  HitCameraShakeClass;
+
+	virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };
+

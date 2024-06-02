@@ -26,7 +26,7 @@ void ATank::Tick(float DeltaTime)
 {
     Super::Tick(DeltaTime);
 
-    if (PlayerController)
+    if (PlayerController && IsLocallyControlled())
     {
         FHitResult HitResult;
         PlayerController->GetHitResultUnderCursor(ECC_Visibility, false, HitResult);
@@ -129,6 +129,21 @@ void ATank::OnRep_CurrentRotation()
 {
     SetActorRotation(CurrentRotation);
 }
+
+/*void ATank::ServerRotateTurret_Implementation(const FVector& HitLocation)
+{
+    MulticastRotateTurret(HitLocation);
+}
+
+bool ATank::ServerRotateTurret_Validate(const FVector& HitLocation)
+{
+    return true;
+}
+
+void ATank::MulticastRotateTurret_Implementation(const FVector& HitLocation)
+{
+    RotateTurret(HitLocation);
+}*/
 
 void ATank::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
 {
