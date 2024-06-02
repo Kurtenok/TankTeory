@@ -1,0 +1,31 @@
+{
+    "Version": "1.2",
+    "Data": {
+        "Source": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\healthcomponent.cpp",
+        "ProvidedModule": "",
+        "PCH": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontanks\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "Includes": [
+            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealgame\\development\\toontanks\\definitions.toontanks.h",
+            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\healthcomponent.h",
+            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealgame\\inc\\toontanks\\uht\\healthcomponent.generated.h",
+            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\toontanksgamemode.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\gameframework\\gamemodebase.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\engine\\serverstatreplicator.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\serverstatreplicator.generated.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gamemodebase.generated.h",
+            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealgame\\inc\\toontanks\\uht\\toontanksgamemode.generated.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystatics.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\kismetsystemlibrary.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\uobject\\propertyaccessutil.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\assetregistry\\arfilter.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\kismetsystemlibrary.generated.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\sound\\dialoguetypes.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\dialoguetypes.generated.h",
+            "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\kismet\\gameplaystaticstypes.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystaticstypes.generated.h",
+            "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealgame\\inc\\engine\\uht\\gameplaystatics.generated.h"
+        ],
+        "ImportedModules": [],
+        "ImportedHeaderUnits": []
+    }
+}

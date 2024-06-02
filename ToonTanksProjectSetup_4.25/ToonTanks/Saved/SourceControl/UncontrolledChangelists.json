@@ -1,0 +1,24 @@
+{
+	"version": 1,
+	"changelists": [
+		{
+			"guid": "00000000000000000000000000000000",
+			"description": "Default Uncontrolled Changelist",
+			"files": [
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/ComponentsActor.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/Maps/Main.umap",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Pawns/BP_PawnTank.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Pawns/BP_PawnTurret.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Actors/BP_Projectile.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/GameModes/BP_ToonTanksGameMode.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Controllers/BP_ToonTanksPlayerController.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Widgets/WBP_StartGameWidget.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Widgets/WBP_EndGameWidget.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/Assets/Effects/P_ProjectileTrail.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/CameraShake/BP_HitCameraShake.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/CameraShake/BP_DeathCameraShake.uasset",
+				"D:/UE Projects/Tanks/ToonTanksProjectSetup_4.25/ToonTanks/Content/BluePrints/Actors/MyProjectile.uasset"
+			]
+		}
+	]
+}
