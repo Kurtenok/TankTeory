@@ -1,4 +1,4 @@
-"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.cpp"
+"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.cpp"
 /I "."
 /I "..\Intermediate\Build\Win64\UnrealEditor\Inc\Engine\UHT"
 /I "..\Shaders\Shared"
@@ -266,10 +266,10 @@
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\shared"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\um"
 /external:I "C:\Program Files (x86)\Windows Kits\10\include\10.0.22621.0\winrt"
-/Yc"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h"
-/Fp"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.pch"
-/Fo"D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.obj"
-/sourceDependencies "D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.dep.json"
+/Yc"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h"
+/Fp"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.pch"
+/Fo"D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.obj"
+/sourceDependencies "D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\Win64\x64\ToonTanksEditor\Development\Engine\SharedPCH.Engine.Cpp17.h.dep.json"
 /Zc:inline
 /nologo
 /Oi

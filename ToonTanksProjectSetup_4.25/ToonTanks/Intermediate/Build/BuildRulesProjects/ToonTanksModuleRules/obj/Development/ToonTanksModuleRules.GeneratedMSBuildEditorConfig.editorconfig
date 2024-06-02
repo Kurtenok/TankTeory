@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = ToonTanksModuleRules
-build_property.ProjectDir = D:\UE Projects\Tanks\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\BuildRulesProjects\ToonTanksModuleRules\
+build_property.ProjectDir = D:\Kursach\TankTeory\ToonTanksProjectSetup_4.25\ToonTanks\Intermediate\Build\BuildRulesProjects\ToonTanksModuleRules\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

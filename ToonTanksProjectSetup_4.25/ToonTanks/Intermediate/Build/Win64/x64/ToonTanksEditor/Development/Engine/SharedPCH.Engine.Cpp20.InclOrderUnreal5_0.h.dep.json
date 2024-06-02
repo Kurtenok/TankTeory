@@ -1,11 +1,11 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.cpp",
+        "Source": "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.cpp",
         "ProvidedModule": "",
         "Includes": [
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\shareddefinitions.engine.cpp20.inclorderunreal5_0.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\shareddefinitions.engine.cpp20.inclorderunreal5_0.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\public\\enginesharedpch.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\slate\\public\\slatesharedpch.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\coreuobject\\public\\coreuobjectsharedpch.h",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "a/QiGSrYpVQ=",
+  "dgSpecHash": "Pt35bejv+KI=",
   "success": true,
-  "projectFilePath": "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
+  "projectFilePath": "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dream Machies\\.nuget\\packages\\blake3\\0.5.1\\blake3.0.5.1.nupkg.sha512",
     "C:\\Users\\Dream Machies\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",

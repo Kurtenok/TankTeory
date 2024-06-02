@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj": {}
+    "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj": {}
   },
   "projects": {
-    "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj": {
+    "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
+        "projectUniqueName": "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
         "projectName": "ToonTanksModuleRules",
-        "projectPath": "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
+        "projectPath": "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\ToonTanksModuleRules.csproj",
         "packagesPath": "C:\\Users\\Dream Machies\\.nuget\\packages\\",
-        "outputPath": "D:\\UE Projects\\Tanks\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\obj\\",
+        "outputPath": "D:\\Kursach\\TankTeory\\ToonTanksProjectSetup_4.25\\ToonTanks\\Intermediate\\Build\\BuildRulesProjects\\ToonTanksModuleRules\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

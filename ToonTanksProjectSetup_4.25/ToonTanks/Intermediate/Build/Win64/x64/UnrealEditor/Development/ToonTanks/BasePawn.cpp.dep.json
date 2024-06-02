@@ -1,15 +1,15 @@
 {
     "Version": "1.2",
     "Data": {
-        "Source": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.cpp",
+        "Source": "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.cpp",
         "ProvidedModule": "",
-        "PCH": "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
+        "PCH": "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\toontankseditor\\development\\engine\\sharedpch.engine.cpp20.inclorderunreal5_0.h.pch",
         "Includes": [
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\definitions.toontanks.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\basepawn.generated.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\projectile.h",
-            "d:\\ue projects\\tanks\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\projectile.generated.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\x64\\unrealeditor\\development\\toontanks\\definitions.toontanks.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\basepawn.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\basepawn.generated.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\source\\toontanks\\projectile.h",
+            "d:\\kursach\\tankteory\\toontanksprojectsetup_4.25\\toontanks\\intermediate\\build\\win64\\unrealeditor\\inc\\toontanks\\uht\\projectile.generated.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\capsulecomponent.h",
             "d:\\ue\\ue_5.3\\engine\\source\\runtime\\engine\\classes\\components\\shapecomponent.h",
             "d:\\ue\\ue_5.3\\engine\\intermediate\\build\\win64\\unrealeditor\\inc\\engine\\uht\\shapecomponent.generated.h",

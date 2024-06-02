@@ -14,21 +14,44 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define TOONTANKS_Tank_generated_h
 
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_SPARSE_DATA
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_RPC_WRAPPERS_NO_PURE_DECLS
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_ACCESSORS
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_INCLASS_NO_PURE_DECLS \
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_SPARSE_DATA
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void MulticastTurn_Implementation(FRotator const& NewRotation); \
+	virtual void MulticastMove_Implementation(FVector const& NewLocation); \
+	virtual bool ServerTurn_Validate(float ); \
+	virtual void ServerTurn_Implementation(float Value); \
+	virtual bool ServerMove_Validate(float ); \
+	virtual void ServerMove_Implementation(float Value); \
+ \
+	DECLARE_FUNCTION(execOnRep_CurrentRotation); \
+	DECLARE_FUNCTION(execOnRep_CurrentLocation); \
+	DECLARE_FUNCTION(execMulticastTurn); \
+	DECLARE_FUNCTION(execMulticastMove); \
+	DECLARE_FUNCTION(execServerTurn); \
+	DECLARE_FUNCTION(execServerMove);
+
+
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_ACCESSORS
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_CALLBACK_WRAPPERS
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesATank(); \
 	friend struct Z_Construct_UClass_ATank_Statics; \
 public: \
 	DECLARE_CLASS(ATank, ABasePawn, COMPILED_IN_FLAGS(0 | CLASS_Config), CASTCLASS_None, TEXT("/Script/ToonTanks"), NO_API) \
-	DECLARE_SERIALIZER(ATank)
+	DECLARE_SERIALIZER(ATank) \
+	enum class ENetFields_Private : uint16 \
+	{ \
+		NETFIELD_REP_START=(uint16)((int32)Super::ENetFields_Private::NETFIELD_REP_END + (int32)1), \
+		CurrentLocation=NETFIELD_REP_START, \
+		CurrentRotation, \
+		NETFIELD_REP_END=CurrentRotation	}; \
+	NO_API virtual void ValidateGeneratedRepEnums(const TArray<struct FRepRecord>& ClassReps) const override;
 
 
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_ENHANCED_CONSTRUCTORS \
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API ATank(ATank&&); \
@@ -40,17 +63,18 @@ public: \
 	NO_API virtual ~ATank();
 
 
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_14_PROLOG
-#define FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_GENERATED_BODY \
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_7_PROLOG
+#define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_SPARSE_DATA \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_RPC_WRAPPERS_NO_PURE_DECLS \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_ACCESSORS \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_INCLASS_NO_PURE_DECLS \
-	FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_17_ENHANCED_CONSTRUCTORS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_SPARSE_DATA \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_ACCESSORS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_CALLBACK_WRAPPERS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_INCLASS_NO_PURE_DECLS \
+	FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h_10_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
@@ -58,7 +82,7 @@ PRAGMA_ENABLE_DEPRECATION_WARNINGS
 template<> TOONTANKS_API UClass* StaticClass<class ATank>();
 
 #undef CURRENT_FILE_ID
-#define CURRENT_FILE_ID FID_UE_Projects_Tanks_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h
+#define CURRENT_FILE_ID FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_Tank_h
 
 
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
