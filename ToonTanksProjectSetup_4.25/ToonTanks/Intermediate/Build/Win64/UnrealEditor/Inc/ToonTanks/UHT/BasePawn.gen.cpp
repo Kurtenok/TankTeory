@@ -25,6 +25,13 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 	TOONTANKS_API UClass* Z_Construct_UClass_AProjectile_NoRegister();
 	UPackage* Z_Construct_UPackage__Script_ToonTanks();
 // End Cross Module References
+	DEFINE_FUNCTION(ABasePawn::execMulticastHandleDestruction)
+	{
+		P_FINISH;
+		P_NATIVE_BEGIN;
+		P_THIS->MulticastHandleDestruction_Implementation();
+		P_NATIVE_END;
+	}
 	DEFINE_FUNCTION(ABasePawn::execMulticastRotateTurret)
 	{
 		P_GET_STRUCT(FRotator,Z_Param_TurretRotation);
@@ -78,6 +85,11 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 	{
 		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_MulticastFire),NULL);
 	}
+	static FName NAME_ABasePawn_MulticastHandleDestruction = FName(TEXT("MulticastHandleDestruction"));
+	void ABasePawn::MulticastHandleDestruction()
+	{
+		ProcessEvent(FindFunctionChecked(NAME_ABasePawn_MulticastHandleDestruction),NULL);
+	}
 	static FName NAME_ABasePawn_MulticastRotateTurret = FName(TEXT("MulticastRotateTurret"));
 	void ABasePawn::MulticastRotateTurret(FRotator TurretRotation)
 	{
@@ -102,6 +114,7 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		UClass* Class = ABasePawn::StaticClass();
 		static const FNameNativePtrPair Funcs[] = {
 			{ "MulticastFire", &ABasePawn::execMulticastFire },
+			{ "MulticastHandleDestruction", &ABasePawn::execMulticastHandleDestruction },
 			{ "MulticastRotateTurret", &ABasePawn::execMulticastRotateTurret },
 			{ "ServerFire", &ABasePawn::execServerFire },
 			{ "ServerRotateTurret", &ABasePawn::execServerRotateTurret },
@@ -127,6 +140,28 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		if (!ReturnFunction)
 		{
 			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_MulticastFire_Statics::FuncParams);
+		}
+		return ReturnFunction;
+	}
+	struct Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics
+	{
+#if WITH_METADATA
+		static const UECodeGen_Private::FMetaDataPairParam Function_MetaDataParams[];
+#endif
+		static const UECodeGen_Private::FFunctionParams FuncParams;
+	};
+#if WITH_METADATA
+	const UECodeGen_Private::FMetaDataPairParam Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics::Function_MetaDataParams[] = {
+		{ "ModuleRelativePath", "BasePawn.h" },
+	};
+#endif
+	const UECodeGen_Private::FFunctionParams Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics::FuncParams = { (UObject*(*)())Z_Construct_UClass_ABasePawn, nullptr, "MulticastHandleDestruction", nullptr, nullptr, nullptr, 0, 0, RF_Public|RF_Transient|RF_MarkAsNative, (EFunctionFlags)0x00044CC1, 0, 0, METADATA_PARAMS(UE_ARRAY_COUNT(Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics::Function_MetaDataParams), Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics::Function_MetaDataParams) };
+	UFunction* Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction()
+	{
+		static UFunction* ReturnFunction = nullptr;
+		if (!ReturnFunction)
+		{
+			UECodeGen_Private::ConstructUFunction(&ReturnFunction, Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction_Statics::FuncParams);
 		}
 		return ReturnFunction;
 	}
@@ -271,6 +306,7 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 	static_assert(UE_ARRAY_COUNT(Z_Construct_UClass_ABasePawn_Statics::DependentSingletons) < 16);
 	const FClassFunctionLinkInfo Z_Construct_UClass_ABasePawn_Statics::FuncInfo[] = {
 		{ &Z_Construct_UFunction_ABasePawn_MulticastFire, "MulticastFire" }, // 2451281080
+		{ &Z_Construct_UFunction_ABasePawn_MulticastHandleDestruction, "MulticastHandleDestruction" }, // 1149168484
 		{ &Z_Construct_UFunction_ABasePawn_MulticastRotateTurret, "MulticastRotateTurret" }, // 1322410705
 		{ &Z_Construct_UFunction_ABasePawn_ServerFire, "ServerFire" }, // 1406613259
 		{ &Z_Construct_UFunction_ABasePawn_ServerRotateTurret, "ServerRotateTurret" }, // 103201578
@@ -403,9 +439,9 @@ void EmptyLinkFunctionForGeneratedCodeBasePawn() {}
 		static const FClassRegisterCompiledInInfo ClassInfo[];
 	};
 	const FClassRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo[] = {
-		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 1549517064U) },
+		{ Z_Construct_UClass_ABasePawn, ABasePawn::StaticClass, TEXT("ABasePawn"), &Z_Registration_Info_UClass_ABasePawn, CONSTRUCT_RELOAD_VERSION_INFO(FClassReloadVersionInfo, sizeof(ABasePawn), 3114881897U) },
 	};
-	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_73081350(TEXT("/Script/ToonTanks"),
+	static FRegisterCompiledInInfo Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_3953702497(TEXT("/Script/ToonTanks"),
 		Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo, UE_ARRAY_COUNT(Z_CompiledInDeferFile_FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_Statics::ClassInfo),
 		nullptr, 0,
 		nullptr, 0);

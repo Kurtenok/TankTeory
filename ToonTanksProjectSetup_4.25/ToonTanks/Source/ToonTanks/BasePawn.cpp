@@ -26,6 +26,14 @@ ABasePawn::ABasePawn()
 
 void ABasePawn::HandleDestruction()
 {
+    if (HasAuthority())
+    {
+        MulticastHandleDestruction();
+    }
+}
+
+void ABasePawn::MulticastHandleDestruction_Implementation()
+{
     if (DeathParticles)
         UGameplayStatics::SpawnEmitterAtLocation(this, DeathParticles, GetActorLocation(), GetActorRotation());
     if (DeathSound)

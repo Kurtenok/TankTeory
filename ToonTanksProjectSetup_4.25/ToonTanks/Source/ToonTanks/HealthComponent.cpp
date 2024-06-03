@@ -1,52 +1,56 @@
-// Fill out your copyright notice in the Description page of Project Settings.
-
-
 #include "HealthComponent.h"
 #include "ToonTanksGameMode.h"
 #include "Kismet/GameplayStatics.h"
+#include "Net/UnrealNetwork.h"
 
-// Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
 {
-	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
-	// off to improve performance if you don't need them.
-	PrimaryComponentTick.bCanEverTick = true;
-
-	// ...
+    PrimaryComponentTick.bCanEverTick = true;
+    SetIsReplicatedByDefault(true); // Enable replication for this component
 }
 
-
-// Called when the game starts
 void UHealthComponent::BeginPlay()
 {
-	Super::BeginPlay();
+    Super::BeginPlay();
 
-	Health = MaxHealth;
-	// ...
+    Health = MaxHealth;
 
-	GetOwner()->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::DamageTaken);
-	ToonTanksGameMode = Cast<AToonTanksGameMode>(UGameplayStatics::GetGameMode(this));
+    if (GetOwner()->HasAuthority()) // Only the server should bind to this delegate
+    {
+        GetOwner()->OnTakeAnyDamage.AddDynamic(this, &UHealthComponent::DamageTaken);
+    }
+
+    ToonTanksGameMode = Cast<AToonTanksGameMode>(UGameplayStatics::GetGameMode(this));
 }
 
-
-
-
-// Called every frame
-void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+void UHealthComponent::OnRep_Health()
 {
-	Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
-
-	// ...
+  
+   // UE_LOG(LogTemp, Warning, TEXT("Health updated: %f"), Health);
 }
 
 void UHealthComponent::DamageTaken(AActor* DamagedActor, float Damage, const UDamageType* DamageType, AController* Instigator, AActor* DamageCauser)
 {
-	if(Damage<=0.f)
-		return;
+    if (Damage <= 0.f) return;
 
-	Health -= Damage;
-	if(Health<=0)
-	{
-		ToonTanksGameMode->ActorDied(DamagedActor);
-	}
+    Health -= Damage;
+    if (Health <= 0)
+    {
+        if (ToonTanksGameMode)
+        {
+            ToonTanksGameMode->ActorDied(DamagedActor);
+        }
+    }
+}
+
+void UHealthComponent::TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction)
+{
+    Super::TickComponent(DeltaTime, TickType, ThisTickFunction);
+}
+
+void UHealthComponent::GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const
+{
+    Super::GetLifetimeReplicatedProps(OutLifetimeProps);
+
+    DOREPLIFETIME(UHealthComponent, Health); // Register the Health variable for replication
 }

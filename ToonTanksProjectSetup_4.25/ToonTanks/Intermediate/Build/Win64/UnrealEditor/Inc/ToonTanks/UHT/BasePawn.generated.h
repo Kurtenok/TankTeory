@@ -18,6 +18,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_10_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_10_EDITOR_ONLY_SPARSE_DATA_PROPERTY_ACCESSORS
 #define FID_Kursach_TankTeory_ToonTanksProjectSetup_4_25_ToonTanks_Source_ToonTanks_BasePawn_h_10_RPC_WRAPPERS_NO_PURE_DECLS \
+	virtual void MulticastHandleDestruction_Implementation(); \
 	virtual void MulticastRotateTurret_Implementation(FRotator TurretRotation); \
 	virtual bool ServerRotateTurret_Validate(FVector ); \
 	virtual void ServerRotateTurret_Implementation(FVector LookAtTarget); \
@@ -25,6 +26,7 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 	virtual bool ServerFire_Validate(); \
 	virtual void ServerFire_Implementation(); \
  \
+	DECLARE_FUNCTION(execMulticastHandleDestruction); \
 	DECLARE_FUNCTION(execMulticastRotateTurret); \
 	DECLARE_FUNCTION(execServerRotateTurret); \
 	DECLARE_FUNCTION(execMulticastFire); \

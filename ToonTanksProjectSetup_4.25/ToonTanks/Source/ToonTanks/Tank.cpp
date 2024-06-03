@@ -85,7 +85,7 @@ void ATank::Turn(float Value)
 void ATank::ServerMove_Implementation(float Value)
 {
     Move(Value);
-    MulticastMove(CurrentLocation); // Добавляем вызов мультикаст-функции
+    MulticastMove(CurrentLocation); 
 }
 
 bool ATank::ServerMove_Validate(float Value)
@@ -96,7 +96,7 @@ bool ATank::ServerMove_Validate(float Value)
 void ATank::ServerTurn_Implementation(float Value)
 {
     Turn(Value);
-    MulticastTurn(CurrentRotation); // Добавляем вызов мультикаст-функции
+    MulticastTurn(CurrentRotation); 
 }
 
 bool ATank::ServerTurn_Validate(float Value)

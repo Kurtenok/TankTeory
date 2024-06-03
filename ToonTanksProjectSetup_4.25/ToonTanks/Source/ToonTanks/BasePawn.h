@@ -61,6 +61,9 @@ private:
     UFUNCTION(NetMulticast, Reliable)
     void MulticastRotateTurret(FRotator TurretRotation);
 
+    UFUNCTION(NetMulticast, Reliable)
+    void MulticastHandleDestruction();
+
 public:
     virtual void GetLifetimeReplicatedProps(TArray<FLifetimeProperty>& OutLifetimeProps) const override;
 };
