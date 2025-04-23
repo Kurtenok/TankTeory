@@ -1,3 +1,3 @@
-RU: в этой игре на Unreal Engine 5.3 игроки управляют танками, чтобы уничтожить все турели на карте. Также в игре мной был добавлен мультиплеер по локальной сети.
+UA: У цій грі на Unreal Engine 5.3 гравці керують танками, щоб знищити всі турелі на карті. Також у грі мною було додано мультиплеєр по локальній мережі.
 
-EN:In this Unreal Engine 5.3 game, players control tanks to destroy all the turrets on the map. I also added local network multiplayer to the game.
+EN: In this Unreal Engine 5.3 game, players control tanks to destroy all the turrets on the map. I also added local network multiplayer to the game.
